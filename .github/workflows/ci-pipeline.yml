@@ -32,7 +32,7 @@ jobs:
         run: dotnet restore ./Compilecare.Mobile/Compilecare.Mobile.csproj -p:TargetFramework=net8.0-android -p:IgnoreMissingWorkloads=true
 
       - name: Build Android target
-        run: dotnet build ./Compilecare.Mobile/Compilecare.Mobile.csproj -c Release -p:TargetFramework=net8.0-android -p:IgnoreMissingWorkloads=true --no-restore
+        run: dotnet build ./Compilecare.Mobile/Compilecare.Mobile.csproj -c Release -p:TargetFramework=net8.0-android --no-restore
         
 
   test:
