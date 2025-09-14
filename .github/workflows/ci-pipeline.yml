@@ -26,10 +26,10 @@ jobs:
         run: dotnet workload install maui-android --skip-manifest-update
 
       - name: Restore solution
-        run: dotnet restore ./Complilecare.Mobile/Complilecare.Mobile.sln -p:IgnoreMissingWorkloads=true
+        run: dotnet restore ./Complilecare.Mobile.sln -p:IgnoreMissingWorkloads=true
 
       - name: Build Android project
-        run: dotnet build ./Complilecare.Mobile/Compilecare.Mobile/Compilecare.Mobile.csproj -c Release -p:TargetFramework=net8.0-android --no-restore
+        run: dotnet build ./Compilecare.Mobile/Compilecare.Mobile.csproj -c Release -p:TargetFramework=net8.0-android --no-restore
         
 
   test:
