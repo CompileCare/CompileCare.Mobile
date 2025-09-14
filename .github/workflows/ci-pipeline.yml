@@ -25,11 +25,11 @@ jobs:
       - name: Install MAUI Android workload
         run: dotnet workload install maui-android --skip-manifest-update
  
-      # - name: Restore (Android only)
-      #   run: dotnet restore Complilecare.Mobile.sln
- 
-      # - name: Build (Android only)
-      #   run: dotnet build Complilecare.Mobile.sln -c Release --no-restore
+      - name: Restore for Android only
+        run: dotnet restore Compilecare.Mobile/Compilecare.Mobile.csproj -p:TargetFramework=net8.0-android
+
+      - name: Build Android target
+        run: dotnet build Compilecare.Mobile/Compilecare.Mobile.csproj -c Release -p:TargetFramework=net8.0-android --no-restore
         
       - name: Restore dependencies
         run: dotnet restore
