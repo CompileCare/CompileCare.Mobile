@@ -28,8 +28,8 @@ jobs:
       - name: Find solution file
         run: find . -name "*.sln"      
 
-      - name: Restore solution (ignore missing workloads like iOS)
-        run: dotnet restore ./Compilecare.Mobile.sln -p:IgnoreMissingWorkloads=true
+      - name: Restore Android (ignore missing workloads like iOS)
+        run: dotnet restore ./Compilecare.Mobile/Compilecare.Mobile.csproj -p:TargetFramework=net8.0-android -p:IgnoreMissingWorkloads=true
 
       - name: Build Android target
         run: dotnet build ./Compilecare.Mobile/Compilecare.Mobile.csproj -c Release -p:TargetFramework=net8.0-android --no-restore
