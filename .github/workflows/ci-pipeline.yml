@@ -22,8 +22,14 @@ jobs:
         with:
           dotnet-version: '9.0.x'
           
-      - name: Restore Workloads
-        run: dotnet workload restore
+      - name: Install MAUI Android workload
+        run: dotnet workload install maui-android --skip-manifest-update
+ 
+      - name: Restore (Android only)
+        run: dotnet restore Compilecare.Mobile.csproj -f:net8.0-android
+ 
+      - name: Build (Android only)
+        run: dotnet build Compilecare.Mobile.csproj -c Release -f:net8.0-android --no-restore
         
       - name: Restore dependencies
         run: dotnet restore
