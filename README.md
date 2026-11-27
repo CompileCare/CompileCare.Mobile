@@ -1,5 +1,5 @@
 # HeapCare Mobile
 
-> **Brand migration in progress:** HeapCare is the product brand. Repository names, source namespaces, package IDs, database identifiers, OIDC realm/client IDs, and deployment identifiers remain unchanged until their coordinated migration is implemented and validated.
+> **Migration status:** HeapCare is the product-facing brand. This repository currently contains only a scaffold README and .gitignore; there are no mobile application IDs, namespaces, package IDs, build projects or deployment resources to rename yet. The GitHub repository slug remains CompileCare.Mobile until the administrative rename is completed.
 
 Mobile application workspace for the HeapCare hospital platform.
